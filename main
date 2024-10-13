@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Breeze Tours</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #4682b4;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            margin: 20px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1e90ff;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sea Breeze Tours</h1>
+    <p>Your gateway to unforgettable sea adventures!</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#tours">Tours</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h2>Welcome to Sea Breeze Tours!</h2>
+    <p>Join us for amazing tours to explore the beauty of the ocean.</p>
+    <img src="ocean.jpg" alt="Beautiful Ocean" style="width:100%; height:auto;">
+</section>
+
+<section id="tours">
+    <h2>Our Tours</h2>
+    <ul>
+        <li>Snorkeling Adventures</li>
+        <li>Scuba Diving Trips</li>
+        <li>Island Hopping</li>
+        <li>Whale Watching Tours</li>
+    </ul>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are dedicated to providing the best sea tours and ensuring that our clients have an unforgettable experience.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: info@seabreezetours.com</p>
+    <p>Phone: (123) 456-7890</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
