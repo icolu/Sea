@@ -68,18 +68,19 @@
             overflow: hidden;
             background-color: black; /* Added a fallback color */
         }
+         .slider {
+                    display: flex;
+                    width: 300%; /* 3 images = 300% */
+                    animation: slide 9s infinite;
+                    transition: transform 0.5s ease-in-out;
+                }
+        
+                .slider img {
+                    width: 100vw; /* Each image will take up 100% of the viewport width */
+                    height: 60vh;
+                    object-fit: cover;
+                }
 
-        .slider {
-            display: flex;
-            width: 100vw;
-            animation: slide 9s infinite;
-        }
-
-        .slider img {
-            width: 300%;
-            height: 60vh;
-            object-fit: cover;
-        }
 
         @keyframes slide {
             0% {
