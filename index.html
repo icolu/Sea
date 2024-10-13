@@ -87,6 +87,75 @@
             padding: 0 10px; /* Reduce padding to make the text more compact */
         }
 
+        /* Footer Container */
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #2F5C28; /* Adjusted green background */
+            padding: 20px;
+            color: white;
+            flex-wrap: wrap; /* To handle responsiveness */
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px; /* Ensures proper spacing on smaller screens */
+        }
+
+        .footer-section h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section p {
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 10px 10px 0 0;
+        }
+
+        .footer-section img.footer-logo {
+            max-width: 150px;
+            margin-top: 10px;
+        }
+
+        /* Footer Bottom */
+        .footer-bottom {
+            text-align: center;
+            background-color: #2F5C28; /* Consistent background */
+            padding: 10px;
+            color: white;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-section {
+                text-align: center;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -133,8 +202,43 @@
     <p>Phone: (123) 456-7890</p>
 </section>
 
+<!-- Footer -->
 <footer>
-    <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+    <div class="footer-container">
+        <!-- Useful Links -->
+        <div class="footer-section">
+            <h3>Useful Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <!-- About Us -->
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
+            <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>, a family-owned travel company.</p>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h3>Connect with us</h3>
+            <p><strong>Contact us:</strong></p>
+            <p>Email: <a href="mailto:ecocircuitos@pmatravelgroup.com">ecocircuitos@pmatravelgroup.com</a></p>
+            <p>Phone: <a href="tel:+5073151488">+507 315-1488</a></p>
+            <img src="pma-logo.png" alt="PMA Travel Group Logo" class="footer-logo">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+    </div>
 </footer>
 
 </body>
