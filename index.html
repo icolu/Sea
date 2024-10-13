@@ -61,9 +61,39 @@
             background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Set the image as background */
         }
 
-        /* Tours Section with custom background */
+        /* CSS Slideshow for Tours Section */
         section#tours {
-            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438'); /* Set a relevant image */
+            position: relative;
+            width: 100%;
+            height: 60vh;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            width: 300%; /* We have 3 images, so 300% */
+            animation: slide 9s infinite; /* Total animation time: 3 images * 3 seconds = 9 seconds */
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the container while keeping aspect ratio */
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+            33.33% {
+                transform: translateX(-100%);
+            }
+            66.66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
         }
 
         /* About Section with custom background */
@@ -211,11 +241,12 @@
     </div>
 </section>
 
-<!-- Tours section -->
+<!-- Tours section with a slider -->
 <section id="tours">
-    <div>
-        <h2>Our Tours</h2>
-        <p>Explore our diverse range of ocean adventures.</p>
+    <div class="slider">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach 1">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Beach 2">
+        <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0" alt="Caribbean Boat">
     </div>
 </section>
 
