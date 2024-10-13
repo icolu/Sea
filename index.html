@@ -127,23 +127,53 @@
             min-height: 60vh;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: rgba(30, 144, 255, 0.2); /* Almost transparent blue background */
+        /* Combined Contact Us and Footer */
+        .contact-footer {
+            background-image: url('https://windows10spotlight.com/wp-content/uploads/2020/10/c9888083ea77c847e39495ae4c8e7593.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
             color: white;
-            width: 100%;
+            padding: 4rem 1rem;
+        }
+
+        .contact-footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(30, 144, 255, 0.2); /* Transparent blue overlay only for the footer area */
+            z-index: 0; /* Positioned behind the content */
+        }
+
+        .contact-footer .content-wrapper {
+            position: relative;
+            z-index: 1; /* Ensure content stays above the overlay */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-footer h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-footer p {
+            font-size: 1.2rem;
+            margin: 5px 0;
         }
 
         /* Footer Container */
         .footer-container {
             display: flex;
             justify-content: space-around;
-            padding: 20px;
             color: white;
             flex-wrap: wrap;
             font-family: 'Poppins', sans-serif;
+            z-index: 1;
         }
 
         .footer-section {
@@ -195,20 +225,6 @@
             text-align: center;
             padding-top: 10px;
             color: white;
-        }
-
-        /* Contact Info Section */
-        .footer-contact {
-            margin-top: 20px;
-        }
-
-        .footer-contact h3 {
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .footer-contact p {
-            margin: 5px 0;
         }
 
         /* Responsive Design */
@@ -278,41 +294,44 @@
     </div>
 </section>
 
-<!-- Combined Contact and Footer -->
-<footer>
-    <div class="footer-container">
+<!-- Combined Contact Us and Footer with shared background image -->
+<section class="contact-footer">
+    <div class="content-wrapper">
+        <!-- Contact Section -->
         <div class="footer-section">
-            <h3>Useful Links</h3>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-            <div class="social-icons">
-                <a href="#"><img src="https://i.pinimg.com/originals/db/7a/e3/db7ae3a51f2ceb54f0932d9156575e37.png" alt="Instagram"></a>
-                <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/042/127/218/non_2x/round-circle-blue-facebook-logo-with-long-shadow-on-a-transparent-background-free-png.png" alt="Facebook"></a>
-            </div>
-        </div>
-
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
-            <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>.</p>
-        </div>
-
-        <!-- Contact Us merged with Footer -->
-        <div class="footer-section footer-contact">
             <h3>Contact Us</h3>
             <p>Email: <a href="mailto:info@seabreezetours.com">info@seabreezetours.com</a></p>
             <p>Phone: (123) 456-7890</p>
         </div>
-    </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+        <!-- Footer Section -->
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><img src="https://i.pinimg.com/originals/db/7a/e3/db7ae3a51f2ceb54f0932d9156575e37.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/042/127/218/non_2x/round-circle-blue-facebook-logo-with-long-shadow-on-a-transparent-background-free-png.png" alt="Facebook"></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
+                <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+        </div>
     </div>
-</footer>
+</section>
 
 </body>
 </html>
