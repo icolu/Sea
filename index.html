@@ -10,11 +10,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://windows10spotlight.com/wp-content/uploads/2020/10/c9888083ea77c847e39495ae4c8e7593.jpg'); /* Background image */
             background-size: cover;
             background-position: center;
             color: white;
-            min-height: 100vh; /* Ensure body takes at least full viewport height */
         }
 
         header {
@@ -46,30 +44,42 @@
             font-weight: bold;
         }
 
+        /* Common style for all sections */
         section {
-            margin: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 800px; /* Limit the width of sections */
-            margin: 20px auto; /* Center the section */
-        }
-
-        /* Home section as a banner */
-        section#home {
             display: flex;
             align-items: center;
             justify-content: flex-start; /* Align text to the left */
-            height: 100vh; /* Full viewport height */
+            height: 60vh; /* Shorter height for sections */
             padding-left: 50px; /* Add space from the left */
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Set the image as background */
             background-size: cover;
             background-position: center;
             color: white;
+            width: 90vw; /* Wider sections */
+            margin: 0 auto; /* Center the sections horizontally */
         }
 
-        /* Text styling for home section */
-        section#home h2, section#home p {
+        /* Home Section with custom background */
+        section#home {
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Set the image as background */
+        }
+
+        /* Tours Section with custom background */
+        section#tours {
+            background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438'); /* Set a relevant image */
+        }
+
+        /* About Section with custom background */
+        section#about {
+            background-image: url('https://images.unsplash.com/photo-1511300098480-8717e321ed48'); /* Set a relevant image */
+        }
+
+        /* Contact Section with custom background */
+        section#contact {
+            background-image: url('https://images.unsplash.com/photo-1542315192-7aeb2f5eaa98'); /* Set a relevant image */
+        }
+
+        /* Text styling for all sections */
+        section h2, section p {
             font-family: 'Roboto', sans-serif; /* Change to Roboto or any other font */
             font-size: 2.5rem; /* Increase font size */
             text-align: left;
@@ -77,10 +87,11 @@
             line-height: 1.3;
         }
 
-        section#home p {
+        section p {
             font-size: 1.5rem; /* Smaller font for paragraph */
         }
 
+        /* Footer section */
         footer {
             text-align: center;
             padding: 1rem;
@@ -163,11 +174,16 @@
                 text-align: center;
             }
 
-            /* Responsive design for home section */
-            section#home h2, section#home p {
+            /* Responsive design for sections */
+            section h2, section p {
                 font-size: 1.5rem;
                 text-align: left;
                 padding-left: 10px;
+            }
+
+            section {
+                height: auto; /* Adjust height for small screens */
+                width: 100%;
             }
         }
 
@@ -189,7 +205,7 @@
     </ul>
 </nav>
 
-<!-- Home section as a full-width banner -->
+<!-- Home section -->
 <section id="home">
     <div>
         <h2>Welcome!</h2>
@@ -197,25 +213,29 @@
     </div>
 </section>
 
+<!-- Tours section -->
 <section id="tours">
-    <h2>Our Tours</h2>
-    <ul>
-        <li>Snorkeling Adventures</li>
-        <li>Scuba Diving Trips</li>
-        <li>Island Hopping</li>
-        <li>Whale Watching Tours</li>
-    </ul>
+    <div>
+        <h2>Our Tours</h2>
+        <p>Explore our diverse range of ocean adventures.</p>
+    </div>
 </section>
 
+<!-- About section -->
 <section id="about">
-    <h2>About Us</h2>
-    <p>We are dedicated to providing the best sea tours and ensuring that our clients have an unforgettable experience.</p>
+    <div>
+        <h2>About Us</h2>
+        <p>We are dedicated to providing unforgettable sea experiences.</p>
+    </div>
 </section>
 
+<!-- Contact section -->
 <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@seabreezetours.com</p>
-    <p>Phone: (123) 456-7890</p>
+    <div>
+        <h2>Contact Us</h2>
+        <p>Email: info@seabreezetours.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
 </section>
 
 <!-- Footer -->
@@ -249,4 +269,13 @@
             <p><strong>Contact us:</strong></p>
             <p>Email: <a href="mailto:ecocircuitos@pmatravelgroup.com">ecocircuitos@pmatravelgroup.com</a></p>
             <p>Phone: <a href="tel:+5073151488">+507 315-1488</a></p>
-            <img src="pma-logo.png" alt="PMA Travel Group Logo" class
+            <img src="pma-logo.png" alt="PMA Travel Group Logo" class="footer-logo">
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Sea Breeze Tours. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
