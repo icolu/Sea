@@ -60,7 +60,7 @@
             background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
         }
 
-        /* Fix the slider */
+        /* Slider for Tours Section */
         section#tours {
             position: relative;
             width: 100%;
@@ -71,9 +71,8 @@
 
         .slider {
             display: flex;
-            width: 300%; /* 3 images = 300% */
-            animation: slide 9s infinite; /* Slide all images in 9 seconds */
-            transition: transform 0.5s ease-in-out;
+            width: 100%;
+            animation: slide 9s infinite;
         }
 
         .slider img {
@@ -83,21 +82,29 @@
         }
 
         @keyframes slide {
-            0% { transform: translateX(0%); }
-            33.33% { transform: translateX(-100%); }
-            66.66% { transform: translateX(-200%); }
-            100% { transform: translateX(0%); }
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
         }
 
         /* About Section */
         section#about {
-            background-image: url('https://images.unsplash.com/photo-1511300098480-8717e321ed48');
+            background-image: url('https://images.unsplash.com/photo-1517154868524-c6b5fbd62a1c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuYW1hfGVufDB8fDB8fHww');
             min-height: 60vh;
         }
 
         /* Contact Section */
         section#contact {
-            background-image: url('https://images.unsplash.com/photo-1542315192-7aeb2f5eaa98');
+            background-image: url('https://windows10spotlight.com/wp-content/uploads/2020/10/c9888083ea77c847e39495ae4c8e7593.jpg');
             min-height: 60vh;
         }
 
