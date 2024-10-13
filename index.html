@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sea Breeze Tours</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file (optional) -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,39 +45,40 @@
         section {
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Align text to the left */
-            min-height: 60vh; /* Shorter height for sections */
-            padding-left: 50px; /* Add space from the left */
-            background-size: cover; /* Make sure the image covers the full section */
-            background-position: center; /* Center the background image */
+            justify-content: flex-start;
+            min-height: 60vh;
+            padding-left: 50px;
+            background-size: cover;
+            background-position: center;
             color: white;
-            width: 100%; /* Full-width sections */
-            margin: 0 auto; /* Center the sections horizontally */
+            width: 100%;
+            margin: 0 auto;
         }
 
-        /* Home Section with custom background */
+        /* Home Section */
         section#home {
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Set the image as background */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
         }
 
-        /* CSS Slideshow for Tours Section */
+        /* Slider for Tours Section */
         section#tours {
             position: relative;
             width: 100%;
             height: 60vh;
             overflow: hidden;
+            background-color: black; /* Added a fallback color */
         }
 
         .slider {
             display: flex;
-            width: 300%; /* We have 3 images, so 300% */
-            animation: slide 9s infinite; /* Total animation time: 3 images * 3 seconds = 9 seconds */
+            width: 300%;
+            animation: slide 9s infinite;
         }
 
         .slider img {
             width: 100%;
-            height: 100%;
-            object-fit: cover; /* Ensures images cover the container while keeping aspect ratio */
+            height: 60vh;
+            object-fit: cover;
         }
 
         @keyframes slide {
@@ -96,34 +96,36 @@
             }
         }
 
-        /* About Section with custom background */
+        /* About Section */
         section#about {
-            background-image: url('https://images.unsplash.com/photo-1511300098480-8717e321ed48'); /* Set a relevant image */
+            background-image: url('https://images.unsplash.com/photo-1511300098480-8717e321ed48');
+            min-height: 60vh;
         }
 
-        /* Contact Section with custom background */
+        /* Contact Section */
         section#contact {
-            background-image: url('https://images.unsplash.com/photo-1542315192-7aeb2f5eaa98'); /* Set a relevant image */
+            background-image: url('https://images.unsplash.com/photo-1542315192-7aeb2f5eaa98');
+            min-height: 60vh;
         }
 
-        /* Text styling for all sections */
+        /* Text styling */
         section h2, section p {
-            font-family: 'Roboto', sans-serif; /* Change to Roboto or any other font */
-            font-size: 2.5rem; /* Increase font size */
+            font-family: 'Roboto', sans-serif;
+            font-size: 2.5rem;
             text-align: left;
             margin: 0;
             line-height: 1.3;
         }
 
         section p {
-            font-size: 1.5rem; /* Smaller font for paragraph */
+            font-size: 1.5rem;
         }
 
         /* Footer section */
         footer {
             text-align: center;
             padding: 1rem;
-            background-color: rgba(0, 0, 0, 0.7); /* New transparent black background */
+            background-color: rgba(0, 0, 0, 0.7);
             color: white;
             width: 100%;
         }
@@ -132,17 +134,16 @@
         .footer-container {
             display: flex;
             justify-content: space-around;
-            background-color: transparent; /* Remove green background */
             padding: 20px;
             color: white;
-            flex-wrap: wrap; /* To handle responsiveness */
-            font-family: 'Georgia', serif; /* Change the font for the footer */
+            flex-wrap: wrap;
+            font-family: 'Georgia', serif;
         }
 
         .footer-section {
             flex: 1;
             margin: 10px;
-            min-width: 200px; /* Ensures proper spacing on smaller screens */
+            min-width: 200px;
         }
 
         .footer-section h3 {
@@ -179,14 +180,14 @@
         }
 
         .social-icons img {
-            width: 25px; /* Smaller size for icons */
-            height: 25px; /* Smaller size for icons */
+            width: 25px;
+            height: 25px;
         }
 
         /* Footer Bottom */
         .footer-bottom {
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 10px;
             color: white;
         }
@@ -202,7 +203,6 @@
                 text-align: center;
             }
 
-            /* Responsive design for sections */
             section h2, section p {
                 font-size: 1.5rem;
                 text-align: left;
@@ -210,7 +210,7 @@
             }
 
             section {
-                height: auto; /* Adjust height for small screens */
+                height: auto;
                 width: 100%;
             }
         }
@@ -270,7 +270,6 @@
 <!-- Footer -->
 <footer>
     <div class="footer-container">
-        <!-- Useful Links -->
         <div class="footer-section">
             <h3>Useful Links</h3>
             <ul>
@@ -285,14 +284,12 @@
             </div>
         </div>
 
-        <!-- About Us -->
         <div class="footer-section">
             <h3>About Us</h3>
             <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
-            <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>, a family-owned travel company.</p>
+            <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>.</p>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-section">
             <h3>Connect with us</h3>
             <p><strong>Contact us:</strong></p>
