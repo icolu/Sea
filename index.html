@@ -78,6 +78,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-start;
+            min-height: 60vh;
             padding-left: 50px;
             background-size: cover;
             background-position: center;
@@ -89,29 +90,27 @@
         /* Home Section */
         section#home {
             background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
-            min-height: 60vh;
         }
 
         /* Slider for Tours Section */
         section#tours {
             position: relative;
             width: 100%;
-            height: auto; /* Change height to auto to fit content */
+            height: 60vh;
+            overflow: hidden;
             background-color: black; /* Added a fallback color */
-            flex-direction: column;
         }
         
         .slider {
             display: flex;
-            width: 300%; /* Ensure slider takes up the full width */
-            height: 60vh; /* Set fixed height for slider */
+            width: 300%;
             animation: slide 20s infinite;
             transition: transform 20s ease-in-out;
         }
         
         .slider img {
             width: 100vw;
-            height: 100%; /* Maintain full height for each image */
+            height: 80vh;
             object-fit: cover;
         }
 
@@ -122,13 +121,11 @@
             100% { transform: translateX(0vw); }
         }
 
-        /* Tours Section Additional Info */
-        .tours-info {
-            padding: 2rem;
-            background-color: rgba(0, 0, 0, 0.7); /* Dark background to contrast the text */
-            color: white;
-            text-align: left;
-            width: 100vw;
+        /* About Section */
+        section#about {
+            background-image: url('https://images.unsplash.com/photo-1517154868524-c6b5fbd62a1c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuYW1hfGVufDB8fDB8fHww');
+            min-height: 60vh;
+            width:100%
         }
 
         /* Combined Contact Us and Footer */
@@ -268,6 +265,7 @@
     <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#tours">Tours</a></li>
+        <li><a href="#about">About Us</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
@@ -287,12 +285,13 @@
         <img src="https://images.unsplash.com/photo-1517154868524-c6b5fbd62a1c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFuYW1hfGVufDB8fDB8fHww" alt="Beach 2">
         <img src="https://windows10spotlight.com/wp-content/uploads/2020/10/c9888083ea77c847e39495ae4c8e7593.jpg" alt="Caribbean Boat">
     </div>
+</section>
 
-    <!-- About Us text moved here -->
-    <div class="tours-info">
+<!-- About section -->
+<section id="about">
+    <div>
         <h2>About Us</h2>
-        <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
-        <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>.</p>
+        <p>We are dedicated to providing unforgettable sea experiences.</p>
     </div>
 </section>
 
@@ -320,6 +319,12 @@
                     <a href="#"><img src="https://i.pinimg.com/originals/db/7a/e3/db7ae3a51f2ceb54f0932d9156575e37.png" alt="Instagram"></a>
                     <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/042/127/218/non_2x/round-circle-blue-facebook-logo-with-long-shadow-on-a-transparent-background-free-png.png" alt="Facebook"></a>
                 </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>We are a locally owned Destination Management Company that has been curating exclusive travel experiences for adventurous travelers throughout Panama since 1999.</p>
+                <p>In 2018, we merged with Panama Marine Adventures and Sublime Journeys to form <strong>PMA Travel Group</strong>.</p>
             </div>
         </div>
 
